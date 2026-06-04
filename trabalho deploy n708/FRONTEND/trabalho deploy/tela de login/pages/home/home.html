@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Comunitária Raízes</title>
+    <style>
+		        /* Estilos Globais */
+        :root {
+            --cor-primaria: #2E7D32; /* Verde musgo */
+            --cor-secundaria: #F9A826; /* Amarelo quente */
+            --cor-fundo: #F5F5F5;
+            --cor-texto: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Cabeçalho e Navegação */
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--cor-secundaria);
+        }
+
+        /* Seção Hero (Destaque Principal) */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--cor-secundaria);
+            color: #333;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e0961c;
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            padding: 60px 5%;
+        }
+
+        .section-titulo {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--cor-primaria);
+        }
+
+        /* Grid de Cards (Como Funciona / Destaques) */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: var(--cor-primaria);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📚 Comunitária Raízes</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#acervo">Acervo</a></li>
+                <li><a href="#participe">Como Participar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h2>A leitura transforma realidades</h2>
+            <p>Um espaço de cultura, aprendizado e troca para toda a comunidade. Venha descobrir novos mundos através das páginas.</p>
+            <a href="#participe" class="btn">Quero Doar Livros</a>
+        </section>
+
+        <section id="sobre">
+            <h2 class="section-titulo">Nossa Missão</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>Fundada em 2023, nossa biblioteca surgiu do desejo de ampliar o acesso à literatura em nosso bairro.</p>
+                <p>Funcionamos por meio de trabalho voluntário e doações.</p>
+                <p>Nosso objetivo é criar um ambiente seguro e acolhedor para crianças, jovens e adultos.</p>
+            </div>
+        </section>
+
+        <section id="acervo" style="background-color: #e9ecef;">
+            <h2 class="section-titulo">O que você encontra aqui</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>📖 Empréstimos Livres</h3>
+                    <p>Faça seu cadastro com um documento com foto e leve até 3 livros para casa por 15 dias, totalmente de graça.</p>
+                </div>
+                <div class="card">
+                    <h3>🧸 Espaço Infantil</h3>
+                    <p>Uma área dedicada aos pequenos com gibis, contos de fadas e atividades de contação de histórias aos sábados.</p>
+                </div>
+                <div class="card">
+                    <h3>💻 Inclusão Digital</h3>
+                    <p>Disponibilizamos computadores com acesso à internet para pesquisas escolares e elaboração de currículos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="participe">
+            <h2 class="section-titulo">Faça Parte da Nossa História</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>Seja um Voluntário</h3>
+                    <p>Precisamos de ajuda para organizar estantes, atender leitores e realizar eventos.</p>
+                    <br>
+                    <a href="#" class="btn" style="background-color: var(--cor-primaria); color: white;">Inscreva-se</a>
+                </div>
+                <div class="card">
+                    <h3>Doe Livros</h3>
+                    <p>Aceitamos literatura nacional, estrangeira, livros infantis e gibis em bom estado.</p>
+                    <br>
+                    <a href="#" class="btn" style="background-color: var(--cor-primaria); color: white;">Ver Regras de Doação</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>📍 Rua das Flores, 123 - Centro | 📞 (00) 90000-0000</p>
+        <p>&copy; 2024 Biblioteca Comunitária Raízes. Todos os direitos reservados.</p>
+    </footer>
+<script>
+<section id="acervo" style="background-color: #e9ecef;">
+            <h2 class="section-titulo">Nosso Acervo Disponível</h2>
+            <div class="grid-cards" id="container-livros">
+                <p style="text-align: center; grid-column: 1/-1;">Carregando livros...</p>
+            </div>
+        </section>
+
+
+        const API_URL = "http://127.0.0.1:8000/api";
+
+        // 1. Função para buscar os livros no Back-end e renderizar na tela
+        async function carregarLivros() {
+            const container = document.getElementById("container-livros");
+
+            try {
+                const response = await fetch(`${API_URL}/livros`);
+                if (!response.ok) throw new Error("Erro ao carregar acervo");
+
+                const livros = await response.json();
+                container.innerHTML = ""; // Limpa a mensagem de carregando
+
+                if (livros.length === 0) {
+                    container.innerHTML = "<p style='grid-column: 1/-1;'>Nenhum livro cadastrado no momento.</p>";
+                    return;
+                }
+
+                // Cria o HTML de cada card dinamicamente
+                livros.forEach(livro => {
+                    const estaDisponivel = livro.qtd_disponivel > 0;
+
+                    container.innerHTML += `
+                        <div class="card">
+                            <h3>📖 ${livro.titulo}</h3>
+                            <p><strong>Autor:</strong> ${livro.autor}</p>
+                            <p><strong>Disponíveis:</strong> ${livro.qtd_disponivel} un.</p>
+                            <br>
+                            <button
+                                class="btn"
+                                onclick="pegarEmprestado(${livro.id})"
+                                ${!estaDisponivel ? 'disabled style="background: #ccc; cursor: not-allowed;"' : ''}>
+                                ${estaDisponivel ? 'Pegar Emprestado' : 'Esgotado'}
+                            </button>
+                        </div>
+                    `;
+                });
+
+            } catch (error) {
+                container.innerHTML = "<p style='color: red; grid-column: 1/-1;'>Não foi possível conectar ao servidor da biblioteca.</p>";
+                console.error(error);
+            }
+        }
+
+        // 2. Função para enviar a requisição de empréstimo para a API
+        async function pegarEmprestado(livroId) {
+            try {
+                const response = await fetch(`${API_URL}/emprestimos`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        id_usuario: 1, // Simulando o ID do usuário logado (ex: o leitor número 1)
+                        id_livro: livroId
+                    })
+                });
+
+                const dados = await response.json();
+
+                if (!response.ok) {
+                    // Exibe a mensagem de erro vinda do back-end (ex: estoque esgotado ou usuário suspenso)
+                    alert(`⚠️ Ops: ${dados.detail}`);
+                } else {
+                    // Sucesso!
+                    alert(`🎉 ${dados.mensagem}\n📅 Devolução até: ${dados.devolucao_prevista}`);
+                    carregarLivros(); // Atualiza a lista na tela para diminuir a quantidade disponível
+                }
+
+            } catch (error) {
+                alert("Erro ao processar empréstimo. Verifique a conexão com o servidor.");
+                console.error(error);
+            }
+        }
+
+        // Executa a busca assim que a página HTML terminar de carregar no navegador
+        document.addEventListener("DOMContentLoaded", carregarLivros);
+    </script>
+
+</body>
+</html>
